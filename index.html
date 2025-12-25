@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="SIMSEK Autovermietung – Audi RS3. Ultra Luxury Vermietung in Duisburg – Gelsenkirchen. Buchung via WhatsApp." />
+  <title>SIMSEK Autovermietung | Audi RS3</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SIMSEK Autovermietung | Audi RS3" />
+  <meta property="og:description" content="Drive Luxury. Drive Simsek. Audi RS3 ab 18 Jahren. Duisburg – Gelsenkirchen. Buchung via WhatsApp." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#07080b;
+      --panel:#0b0d12;
+      --panel2:#0e1118;
+      --text:#e8eaf0;
+      --muted:#a7adbd;
+      --line:rgba(255,255,255,.08);
+      --gold1:#f6d07a;
+      --gold2:#b8862b;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1160px;
+      --glow: 0 0 40px rgba(246,208,122,.10);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(246,208,122,.08), transparent 60%),
+        radial-gradient(900px 600px at 85% 20%, rgba(184,134,43,.06), transparent 55%),
+        radial-gradient(700px 500px at 55% 92%, rgba(246,208,122,.05), transparent 55%),
+        linear-gradient(180deg, #05060a 0%, #07080b 60%, #05060a 100%);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(5,6,10,.72), rgba(5,6,10,.35));
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .row{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:220px;
+    }
+    .badge{
+      width:42px;height:42px;border-radius:50%;
+      background: radial-gradient(circle at 35% 30%, rgba(246,208,122,.45), rgba(184,134,43,.22) 35%, rgba(255,255,255,.05) 65%, rgba(0,0,0,.25));
+      border:1px solid rgba(246,208,122,.25);
+      box-shadow: var(--glow);
+      display:grid; place-items:center;
+      position:relative; overflow:hidden;
+    }
+    .badge:after{
+      content:""; position:absolute; inset:-40%;
+      background: conic-gradient(from 180deg, transparent 0 60%, rgba(246,208,122,.18) 70%, transparent 85%);
+      animation: spin 8s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .brand h1{margin:0;font-size:14px;letter-spacing:.22em;text-transform:uppercase}
+    .brand p{margin:2px 0 0;color:var(--muted);font-size:12px}
+    nav{
+      display:flex; gap:18px; align-items:center;
+      color:rgba(232,234,240,.85);
+      font-size:13px;
+    }
+    nav a{opacity:.85}
+    nav a:hover{opacity:1}
+    .actions{display:flex; gap:10px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      cursor:pointer;
+      transition: transform .15s ease, border-color .2s ease, background .2s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(246,208,122,.25); background: rgba(255,255,255,.05)}
+    .btn.primary{
+      border-color: rgba(246,208,122,.30);
+      background: linear-gradient(180deg, rgba(246,208,122,.16), rgba(184,134,43,.10));
+      box-shadow: var(--glow);
+    }
+    .btn.primary:hover{border-color: rgba(246,208,122,.48)}
+    .btn .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, var(--gold1), var(--gold2));
+      box-shadow: 0 0 18px rgba(246,208,122,.35);
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;
+      padding:54px 0 26px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .heroCard{
+      position:relative;
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      min-height: 520px;
+    }
+    .heroMedia{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(1200px 600px at 30% 20%, rgba(246,208,122,.10), transparent 60%),
+        linear-gradient(110deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.40) 45%, rgba(0,0,0,.72) 100%),
+        url("https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=2200&q=80") center/cover no-repeat;
+      transform: scale(1.06);
+      filter: saturate(1.05) contrast(1.02);
+      will-change: transform;
+    }
+    .heroOverlay{
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.65) 70%, rgba(0,0,0,.88) 100%);
+    }
+    .heroContent{
+      position:relative;
+      padding: 34px 28px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      height:100%;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      color: rgba(232,234,240,.88);
+      font-size:12px;
+      letter-spacing:.24em;
+      text-transform:uppercase;
+    }
+    .kicker .line{
+      height:1px; width:38px;
+      background: linear-gradient(90deg, transparent, rgba(246,208,122,.65), transparent);
+    }
+    .headline{
+      margin:0;
+      font-size: clamp(30px, 4.2vw, 54px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+    .headline span{
+      background: linear-gradient(135deg, var(--gold1), var(--gold2));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 0 22px rgba(246,208,122,.08);
+    }
+    .sub{
+      margin:0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(232,234,240,.86);
+      max-width: 56ch;
+    }
+    .heroMeta{
+      margin-top:auto;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.22);
+      color: rgba(232,234,240,.90);
+      font-size: 13px;
+    }
+    .pill b{color:var(--text)}
+    .heroCTAs{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 4px;
+    }
+
+    /* Side card */
+    .side{
+      display:grid;
+      gap:12px;
+      height:100%;
+    }
+    .panel{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      box-shadow: var(--shadow);
+      padding: 18px 18px;
+    }
+    .panel h3{margin:0 0 8px; font-size:14px; letter-spacing:.18em; text-transform:uppercase; color: rgba(232,234,240,.86)}
+    .panel p{margin:0; color: rgba(232,234,240,.82); line-height:1.6; font-size:14px}
+    .contactList{display:grid; gap:10px; margin-top:12px}
+    .contactItem{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.22);
+    }
+    .contactItem small{display:block; color:var(--muted); font-size:12px}
+    .contactItem strong{font-size:14px}
+    .miniBtn{
+      padding:10px 12px; border-radius: 999px;
+      border:1px solid rgba(246,208,122,.24);
+      background: rgba(246,208,122,.10);
+      font-size:13px;
+      transition: transform .15s ease, background .2s ease;
+    }
+    .miniBtn:hover{transform: translateY(-1px); background: rgba(246,208,122,.14)}
+    .priceBox{
+      display:grid; gap:10px;
+      border-radius: var(--radius);
+      border:1px solid rgba(246,208,122,.18);
+      background: radial-gradient(700px 260px at 30% 20%, rgba(246,208,122,.12), transparent 60%),
+                  linear-gradient(180deg, rgba(246,208,122,.10), rgba(0,0,0,.10));
+      padding: 16px;
+      box-shadow: var(--glow);
+    }
+    .priceBox .row{display:flex; align-items:flex-end; justify-content:space-between; gap:10px}
+    .price{
+      font-size: 30px; line-height:1;
+      letter-spacing: -0.02em;
+    }
+    .price span{
+      font-size: 12px; color: rgba(232,234,240,.75);
+      letter-spacing:.14em; text-transform:uppercase;
+    }
+    .note{font-size:12px; color: rgba(232,234,240,.70); line-height:1.5}
+
+    /* Sections */
+    section{padding: 38px 0}
+    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    .card{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      box-shadow: var(--shadow);
+      padding: 20px;
+      overflow:hidden;
+      position:relative;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle at 30% 25%, rgba(246,208,122,.10), transparent 40%);
+      transform: rotate(12deg);
+      pointer-events:none;
+    }
+    .card > *{position:relative}
+    .sectionTitle{
+      margin:0 0 10px;
+      font-size: 22px;
+      letter-spacing:-0.01em;
+    }
+    .sectionTitle .gold{
+      background: linear-gradient(135deg, var(--gold1), var(--gold2));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .bullets{margin: 12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+    .bullets li{
+      display:flex; gap:10px; align-items:flex-start;
+      color: rgba(232,234,240,.86);
+      line-height:1.5;
+    }
+    .check{
+      width:18px;height:18px;border-radius: 6px;
+      background: rgba(246,208,122,.12);
+      border:1px solid rgba(246,208,122,.26);
+      box-shadow: 0 0 18px rgba(246,208,122,.10);
+      flex:0 0 18px;
+      position:relative;
+      top:2px;
+    }
+    .check:after{
+      content:"";
+      position:absolute; left:5px; top:3px;
+      width:6px; height:10px;
+      border-right:2px solid rgba(246,208,122,.85);
+      border-bottom:2px solid rgba(246,208,122,.85);
+      transform: rotate(40deg);
+    }
+
+    /* RS3 showcase */
+    .rs3{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .mediaCard{
+      border-radius: var(--radius2);
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      min-height: 380px;
+      position:relative;
+      background:
+        linear-gradient(110deg, rgba(0,0,0,.60), rgba(0,0,0,.25)),
+        url("https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=2200&q=80") center/cover no-repeat;
+      filter: saturate(1.05) contrast(1.03);
+    }
+    .mediaCard .tag{
+      position:absolute; left:16px; top:16px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(246,208,122,.28);
+      background: rgba(0,0,0,.35);
+      letter-spacing:.18em; text-transform:uppercase;
+      font-size:12px;
+    }
+    .specGrid{
+      display:grid; gap:12px;
+    }
+    .specs{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top: 12px;
+    }
+    .spec{
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.22);
+      padding: 12px;
+    }
+    .spec small{display:block; color:var(--muted); font-size:12px}
+    .spec strong{font-size:14px}
+    .ctaBox{
+      border-radius: var(--radius2);
+      border:1px solid rgba(246,208,122,.22);
+      background:
+        radial-gradient(900px 320px at 20% 10%, rgba(246,208,122,.14), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      padding: 22px;
+      box-shadow: var(--glow);
+    }
+    .ctaBox h3{margin:0 0 10px; font-size:22px}
+    .ctaBox p{margin:0; color: rgba(232,234,240,.84); line-height:1.6}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+
+    /* Map / contact */
+    .mapCard{
+      border-radius: var(--radius2);
+      border:1px solid var(--line);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.02);
+    }
+    .mapHead{
+      padding:16px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .mapHead .left h4{margin:0; font-size:14px; letter-spacing:.18em; text-transform:uppercase; color: rgba(232,234,240,.86)}
+    .mapHead .left p{margin:6px 0 0; color: rgba(232,234,240,.76); font-size:13px}
+    iframe{border:0; width:100%; height:380px}
+
+    .final{
+      padding: 46px 0 66px;
+    }
+    .finalGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    form{
+      display:grid; gap:10px;
+      margin-top: 12px;
+    }
+    input, textarea{
+      width:100%;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.25);
+      color: var(--text);
+      padding: 14px 14px;
+      outline: none;
+      font-size: 14px;
+    }
+    textarea{min-height:120px; resize: vertical}
+    input:focus, textarea:focus{border-color: rgba(246,208,122,.35); box-shadow: var(--glow)}
+    .fineprint{color: rgba(232,234,240,.62); font-size:12px; line-height:1.5; margin-top:10px}
+
+    footer{
+      border-top:1px solid var(--line);
+      padding: 22px 0 34px;
+      color: rgba(232,234,240,.70);
+      font-size: 13px;
+    }
+    .footRow{
+      display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .madeby a{
+      background: linear-gradient(135deg, var(--gold1), var(--gold2));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    /* Scroll reveal */
+    .reveal{opacity:0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease}
+    .reveal.in{opacity:1; transform: translateY(0)}
+    /* Floating WhatsApp */
+    .floatWA{
+      position:fixed; right:18px; bottom:18px; z-index:80;
+      display:flex; align-items:center; gap:10px;
+      border-radius: 999px;
+      padding: 12px 14px;
+      border: 1px solid rgba(246,208,122,.28);
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      transition: transform .15s ease;
+    }
+    .floatWA:hover{transform: translateY(-2px)}
+    .waIcon{
+      width:38px; height:38px; border-radius:50%;
+      display:grid; place-items:center;
+      background: radial-gradient(circle at 30% 30%, rgba(246,208,122,.30), rgba(184,134,43,.18));
+      border:1px solid rgba(246,208,122,.22);
+      box-shadow: var(--glow);
+      font-weight:800;
+    }
+    .floatWA .txt{display:grid; line-height:1.1}
+    .floatWA .txt b{font-size:13px}
+    .floatWA .txt span{font-size:12px; color: rgba(232,234,240,.72)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr; }
+      .heroCard{min-height: 520px}
+      .grid2{grid-template-columns:1fr}
+      .rs3{grid-template-columns:1fr}
+      .finalGrid{grid-template-columns:1fr}
+      nav{display:none}
+      .brand{min-width:auto}
+    }
+    @media (max-width: 420px){
+      .heroContent{padding: 28px 18px}
+      .btn{padding:12px 12px}
+      iframe{height:340px}
+      .floatWA .txt{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ====== CONFIG ======
+    1) Inserisci qui il numero WhatsApp (formato internazionale senza +, senza spazi)
+       es: 4917612345678
+  -->
+  <script>
+    const WHATSAPP_NUMBER = "4917612345678"; // <-- TODO: sostituisci
+    const WHATSAPP_DEFAULT_TEXT = "Hallo! Ich interessiere mich für den Audi RS3. Können Sie mir Verfügbarkeit & Details senden?";
+    const EMAIL = "simsek.autovermietung@gmail.com";
+    const CITY = "Duisburg – Gelsenkirchen";
+  </script>
+
+  <header class="topbar">
+    <div class="wrap">
+      <div class="row">
+        <div class="brand">
+          <div class="badge" aria-hidden="true"></div>
+          <div>
+            <h1>SIMSEK AUTOVERMIETUNG</h1>
+            <p>Drive Luxury. Drive Simsek.</p>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#rs3">Audi RS3</a>
+          <a href="#location">Standort</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="actions">
+          <a class="btn" id="mailTop" href="#">
+            <span class="dot"></span>
+            E-Mail
+          </a>
+          <a class="btn primary" id="waTop" href="#">
+            <span class="dot"></span>
+            WhatsApp buchen
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="heroCard reveal">
+            <div class="heroMedia" id="parallax"></div>
+            <div class="heroOverlay"></div>
+
+            <div class="heroContent">
+              <div class="kicker">
+                <span class="line"></span>
+                ULTRA LUXURY / AUDI RS3
+              </div>
+
+              <h2 class="headline">
+                <span>Audi RS3</span> mieten.<br/>
+                Eindruck hinterlassen.
+              </h2>
+
+              <p class="sub">
+                Für Menschen, die Leistung nicht erklären müssen.
+                <br/><b>SIMSEK Autovermietung</b> steht für Präsenz, Stil und kompromisslose Performance.
+              </p>
+
+              <div class="heroCTAs">
+                <a class="btn primary" id="heroWA" href="#">
+                  <span class="dot"></span>
+                  Jetzt RS3 anfragen
+                </a>
+                <a class="btn" href="#rs3">
+                  Details ansehen
+                </a>
+              </div>
+
+              <div class="heroMeta">
+                <div class="pill"><b>ab 18 Jahren</b></div>
+                <div class="pill"><b>Standort:</b> <span id="city1"></span></div>
+                <div class="pill"><b>Kontakt:</b> WhatsApp / E-Mail</div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="side">
+            <div class="panel reveal">
+              <h3>Direktkontakt</h3>
+              <p>
+                Schnell. Diskret. Ohne Umwege.<br/>
+                Buchung & Fragen: WhatsApp oder E-Mail.
+              </p>
+
+              <div class="contactList">
+                <div class="contactItem">
+                  <div>
+                    <small>E-Mail</small>
+                    <strong id="email1"></strong>
+                  </div>
+                  <a class="miniBtn" id="mail1" href="#">Öffnen</a>
+                </div>
+
+                <div class="contactItem">
+                  <div>
+                    <small>WhatsApp</small>
+                    <strong>Direkt chatten</strong>
+                  </div>
+                  <a class="miniBtn" id="wa1" href="#">Start</a>
+                </div>
+
+                <div class="contactItem">
+                  <div>
+                    <small>Region</small>
+                    <strong id="city2"></strong>
+                  </div>
+                  <a class="miniBtn" href="#location">Map</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="priceBox reveal">
+              <div class="row">
+                <div>
+                  <div class="kicker" style="margin:0">
+                    <span class="line"></span>
+                    Preis
+                  </div>
+                  <div class="price">199 € <span>/ Tag</span></div>
+                </div>
+                <a class="btn primary" id="waPrice" href="#">
+                  <span class="dot"></span>
+                  Verfügbarkeit
+                </a>
+              </div>
+              <div class="note">
+                Luxus ist nicht laut. Er ist präzise.<br/>
+                Audi RS3 – Performance, die man sieht, bevor man sie hört.
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="grid2">
+          <div class="card reveal">
+            <h3 class="sectionTitle"><span class="gold">Services</span> auf Premium-Niveau</h3>
+            <p style="margin:0;color:rgba(232,234,240,.84);line-height:1.65">
+              Keine Agentur-Floskeln. Kein Chaos. Nur ein klarer Ablauf:
+              Anfrage → Verfügbarkeit → Übergabe → Erlebnis.
+            </p>
+            <ul class="bullets">
+              <li><span class="check"></span><span>Sportwagen-Vermietung <b>ab 18 Jahren</b></span></li>
+              <li><span class="check"></span><span>Direktkontakt via <b>WhatsApp</b></span></li>
+              <li><span class="check"></span><span>Region: <b>Duisburg – Gelsenkirchen</b> (NRW)</span></li>
+              <li><span class="check"></span><span>Fokus: <b>Audi RS3</b> – Performance & Präsenz</span></li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="sectionTitle">Für <span class="gold">besondere Momente</span></h3>
+            <p style="margin:0;color:rgba(232,234,240,.84);line-height:1.65">
+              Date Night. Content. Auftritt. Oder einfach: Du willst fahren, was du fühlst.
+              Der RS3 ist kein Auto – er ist ein Statement.
+            </p>
+            <div class="ctaRow" style="margin-top:14px">
+              <a class="btn primary" id="waServices" href="#"><span class="dot"></span>Jetzt anfragen</a>
+              <a class="btn" href="#kontakt">Kontakt</a>
+            </div>
+            <p class="fineprint" style="margin:14px 0 0">
+              Tipp: Schreibe in WhatsApp direkt Datum + Wunschzeit – dann geht’s schneller.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RS3 -->
+    <section id="rs3">
+      <div class="wrap">
+        <div class="rs3">
+          <div class="mediaCard reveal" aria-label="Audi RS3 Foto">
+            <div class="tag">AUDI RS3</div>
+          </div>
+
+          <div class="specGrid">
+            <div class="card reveal">
+              <h3 class="sectionTitle">Der <span class="gold">RS3</span> — kompromisslos</h3>
+              <p style="margin:0;color:rgba(232,234,240,.84);line-height:1.65">
+                Klare Linien. Aggressive Präsenz. Und ein Sound, der sofort Respekt erzeugt.
+                Wenn du auffallen willst, ohne zu schreien: Das ist dein Auto.
+              </p>
+
+              <div class="specs">
+                <div class="spec"><small>Vibe</small><strong>Ultra Luxury / Sport</strong></div>
+                <div class="spec"><small>Ziel</small><strong>Impact & Erlebnis</strong></div>
+                <div class="spec"><small>Buchung</small><strong>WhatsApp / E-Mail</strong></div>
+                <div class="spec"><small>Region</small><strong id="city3"></strong></div>
+              </div>
+            </div>
+
+            <div class="ctaBox reveal">
+              <h3>Bereit für den Moment?</h3>
+              <p>
+                Schreib uns jetzt auf WhatsApp mit:
+                <b>Datum</b> + <b>Uhrzeit</b> + <b>RS3</b>.<br/>
+                Du bekommst schnell eine Antwort – ohne Hin und Her.
+              </p>
+
+              <div class="ctaRow">
+                <a class="btn primary" id="waClose" href="#">
+                  <span class="dot"></span>
+                  RS3 jetzt sichern
+                </a>
+                <a class="btn" id="mailClose" href="#">
+                  <span class="dot"></span>
+                  E-Mail senden
+                </a>
+              </div>
+
+              <!-- CTA DA CHIUSURA (forte, secca, da vendita) -->
+              <p class="fineprint" style="margin-top:12px">
+                <b>Letzte Frage:</b> Willst du den RS3 nur sehen – oder fahren?<br/>
+                <b>Tippe jetzt auf WhatsApp</b> und reserviere deinen Slot.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION / MAP -->
+    <section id="location">
+      <div class="wrap">
+        <div class="mapCard reveal">
+          <div class="mapHead">
+            <div class="left">
+              <h4>Standort</h4>
+              <p><span id="city4"></span> · NRW</p>
+            </div>
+            <a class="btn" id="waMap" href="#"><span class="dot"></span>WhatsApp</a>
+          </div>
+
+          <!-- Google Maps Embed (generico su Duisburg + Gelsenkirchen).
+               Se vuoi, sostituisci l'URL con quello esatto del punto di consegna. -->
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Duisburg%20Gelsenkirchen&output=embed"
+            title="Google Maps – Duisburg Gelsenkirchen"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="kontakt" class="final">
+      <div class="wrap">
+        <div class="finalGrid">
+          <div class="card reveal">
+            <h3 class="sectionTitle">Kontakt</h3>
+            <p style="margin:0;color:rgba(232,234,240,.84);line-height:1.65">
+              Schnellster Weg: WhatsApp.<br/>
+              Alternativ: E-Mail – wir melden uns so schnell wie möglich.
+            </p>
+
+            <form id="contactForm">
+              <input id="name" type="text" placeholder="Name" autocomplete="name" />
+              <input id="mail" type="email" placeholder="E-Mail" autocomplete="email" />
+              <textarea id="msg" placeholder="Nachricht (z.B. Datum, Uhrzeit, Audi RS3)"></textarea>
+              <button class="btn primary" type="submit">
+                <span class="dot"></span>
+                Nachricht per WhatsApp senden
+              </button>
+            </form>
+
+            <div class="fineprint">
+              Hinweis: Das Formular sendet deine Nachricht direkt an WhatsApp (schnell & effizient).
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <h3>SIMSEK AUTOVERMIETUNG</h3>
+            <p>
+              <b>Drive Luxury. Drive Simsek.</b><br/>
+              Fokus: <b>Audi RS3</b> · ab <b>18 Jahren</b><br/>
+              Region: <b id="city5"></b>
+            </p>
+
+            <div class="contactList">
+              <div class="contactItem">
+                <div>
+                  <small>WhatsApp</small>
+                  <strong>Direkt reservieren</strong>
+                </div>
+                <a class="miniBtn" id="waFinal" href="#">Start</a>
+              </div>
+
+              <div class="contactItem">
+                <div>
+                  <small>E-Mail</small>
+                  <strong id="email2"></strong>
+                </div>
+                <a class="miniBtn" id="mail2" href="#">Öffnen</a>
+              </div>
+            </div>
+
+            <!-- CTA CHIUSURA SUPER DIRETTA -->
+            <div class="priceBox" style="margin-top:14px">
+              <div class="row">
+                <div>
+                  <div class="kicker" style="margin:0">
+                    <span class="line"></span>
+                    Closing CTA
+                  </div>
+                  <div style="font-size:16px;line-height:1.45;color:rgba(232,234,240,.90);margin-top:6px">
+                    <b>Schick jetzt „RS3“</b> auf WhatsApp.<br/>
+                    Wir klären Verfügbarkeit sofort.
+                  </div>
+                </div>
+              </div>
+              <div class="ctaRow" style="margin-top:12px">
+                <a class="btn primary" id="waUltraClose" href="#"><span class="dot"></span>„RS3“ senden</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footRow">
+          <div>© <span id="year"></span> SIMSEK Autovermietung · Alle Rechte vorbehalten</div>
+          <div class="madeby">Website realisiert von <a href="#" aria-label="DUDA Webstudio">DUDA Webstudio</a></div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="floatWA" id="floatWA" href="#" aria-label="WhatsApp öffnen">
+    <div class="waIcon">WA</div>
+    <div class="txt">
+      <b>WhatsApp</b>
+      <span>RS3 reservieren</span>
+    </div>
+  </a>
+
+  <script>
+    // helpers
+    const enc = encodeURIComponent;
+    const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${enc(text)}`;
+    const mailLink = () => `mailto:${EMAIL}`;
+
+    // fill dynamic
+    document.getElementById("year").textContent = new Date().getFullYear();
+    ["city1","city2","city3","city4","city5"].forEach(id => document.getElementById(id).textContent = CITY);
+    ["email1","email2"].forEach(id => document.getElementById(id).textContent = EMAIL);
+
+    // bind CTAs
+    const waTextDefault = WHATSAPP_DEFAULT_TEXT;
+    const waTextRS3 = "RS3";
+    const waTextFast = "Hallo! RS3 bitte. Datum/Uhrzeit: ____ . Abholung in Duisburg/Gelsenkirchen. Danke!";
+
+    const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.href = href; };
+
+    // WhatsApp buttons
+    ["waTop","heroWA","wa1","waPrice","waServices","waClose","waMap","waFinal","floatWA"].forEach(id => setHref(id, waLink(waTextDefault)));
+    setHref("waUltraClose", waLink(waTextRS3));
+
+    // Mail buttons
+    ["mailTop","mail1","mail2","mailClose"].forEach(id => setHref(id, mailLink()));
+
+    // Contact form -> WhatsApp message
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = (document.getElementById("name").value || "").trim();
+      const mail = (document.getElementById("mail").value || "").trim();
+      const msg  = (document.getElementById("msg").value || "").trim();
+
+      const composed =
+`Hallo! Ich möchte den Audi RS3 anfragen.
+Name: ${name || "-"}
+E-Mail: ${mail || "-"}
+Nachricht: ${msg || "-"}
+Standort: ${CITY}`;
+
+      window.open(waLink(composed), "_blank", "noopener,noreferrer");
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("in"); });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+    // Parallax (subtle)
+    const hero = document.getElementById("parallax");
+    let raf = null;
+    window.addEventListener("scroll", () => {
+      if(!hero) return;
+      if(raf) return;
+      raf = requestAnimationFrame(() => {
+        const y = window.scrollY || 0;
+        const amt = Math.min(18, y * 0.02);
+        hero.style.transform = `translateY(${amt}px) scale(1.06)`;
+        raf = null;
+      });
+    }, { passive:true });
+  </script>
+</body>
+</html>
